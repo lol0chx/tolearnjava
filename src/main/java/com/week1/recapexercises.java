@@ -15,7 +15,12 @@ public class recapexercises {
         int random =  (int) (Math.random() *10);
         System.out.println(random);
         System.out.println(random + 5);
-        System.out.print("\nExercise: Time Calculator (No if statements)\n");
+        System.out.print("\nBonus 2: Minutes to Hours and Minutes\n");
+        int minutes =175;
+        int Hours = minutes / 60;
+        int Leftover = minutes % 60;
+        System.out.println(minutes + " minutes =" + Hours +" Hours and " + Leftover + " minutes") ;
+        System.out.print("\nBonus 3: Time Calculator\n");
         int nrHours = 3;
         int nrMinutes = 40;
         int minutesToAdd = 183;
