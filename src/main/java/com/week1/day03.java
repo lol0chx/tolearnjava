@@ -6,8 +6,20 @@ public class day03 {
         // to see how IntelliJ IDEA suggests fixing it.
         IO.println(String.format("Hello and welcome!"));
 
-   double randomvalue = Math.random();
-   int randomnum =  (int) (Math.random() *100);
-   System.out.println(randomnum);
+   //double randomvalue = Math.random();
+
+        for (int i=0;i<20; i++) {
+            int randomnum =  (int) (Math.random() *7);
+            if (randomnum ==0) {
+                randomnum = randomnum +1;
+            }
+            System.out.println(randomnum);
+            nextline();
+        }
+   }
+
+    private static void nextline() {
     }
+
 }
+
