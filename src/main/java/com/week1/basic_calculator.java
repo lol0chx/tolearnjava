@@ -19,15 +19,23 @@ public class basic_calculator {
                 "(M)ultiply\n" +
                 "(D)ivide\n");
         out.println("choose what you want to do ");
-        String in = input.nextLine();
-        if (in.equals("A") || in.equals("a"))
+        String operation = input.nextLine();
+        int result =0;
+        if (operation.equalsIgnoreCase("A"))
         {
-            int result = firstnum + secondnum;
+            result = firstnum + secondnum;
             out.println("the result is "+ result);
         }
-        else {
-            out.println("choose an opiton");
+        else if (operation.equalsIgnoreCase("S")) {
+            result= firstnum - secondnum;
         }
+        else if (operation.equalsIgnoreCase("M")){
+            result= firstnum* secondnum;
+        }
+        else {
+            result = firstnum /secondnum;
+        }
+        out.println("the result is "+ result);
 //        int in= input.nextInt();
 //        input.nextLine();
 //        if (in == 1){
