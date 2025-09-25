@@ -18,9 +18,31 @@ public class basic_calculator {
                 "(S)ubtract\n" +
                 "(M)ultiply\n" +
                 "(D)ivide\n");
-        String in= input.nextLine();
-        int result = firstnum * secondnum;
-        out.println("the result is " + result);
+        out.println("choose what you want to do ");
+        String in = input.nextLine();
+        if (in.equals("A") || in.equals("a"))
+        {
+            int result = firstnum + secondnum;
+            out.println("the result is "+ result);
+        }
+        else {
+            out.println("choose an opiton");
+        }
+//        int in= input.nextInt();
+//        input.nextLine();
+//        if (in == 1){
+//            int result = firstnum + secondnum;
+//            out.println("the result is " + result);
+//        }
+//        else if (in == 2) {
+//            int result = firstnum - secondnum;
+//            out.println("the result is "+ result);
+//
+//        }
+//        else {
+//            out.println("error");
+//        }
+
 
     }
 }

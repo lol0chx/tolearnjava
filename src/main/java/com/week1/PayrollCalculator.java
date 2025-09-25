@@ -15,7 +15,7 @@ public class PayrollCalculator {
         out.println("whats your pay rate");
         float payrate = input.nextFloat();
         float grosspay = hoursworked * payrate;
-        out.printf("your gross pay is %.1f", grosspay);
+        out.printf("your gross pay is %.3f", grosspay);
 
     }
 }
