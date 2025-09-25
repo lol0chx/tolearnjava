@@ -2,7 +2,7 @@ package com.week1;
 
 import java.util.Scanner;
 
-public class sandwitchshop {
+public class sandwichshop {
      void main() {
          double discount =0;
          double price =0;
@@ -17,6 +17,17 @@ public class sandwitchshop {
              price= 8.95;
          }
          scanner.nextLine();
+         System.out.println("Do you want the sandwich laoded?\na. Regular: $1.00\n" +
+                 "b. Large: $1.75");
+         String loaded = scanner.nextLine();
+         if (loaded.equalsIgnoreCase("a")){
+             price =price +1;
+
+         } else if (loaded.equalsIgnoreCase("b")) {
+             price=price+1.75;
+
+         }
+
          System.out.println("Enter your age ");
          int age = scanner.nextInt();
          scanner.nextLine();
