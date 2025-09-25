@@ -5,7 +5,7 @@ import java.util.Scanner;
 import static java.lang.System.out;
 
 public class inputexercise {
-    static void main() {
+    void main() {
         Scanner s = new Scanner(System.in);
         out.println("whats your favorite animal ");
         String name = s.nextLine();
