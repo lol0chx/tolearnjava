@@ -3,7 +3,7 @@ package com.week1;
 import java.util.Scanner;
 
 public class methodexercises2 {
-
+public static Scanner scanner = new Scanner(System.in);
     void main(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter your name");
