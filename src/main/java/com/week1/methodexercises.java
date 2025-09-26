@@ -1,16 +1,21 @@
 package com.week1;
 
+import java.util.Scanner;
+
 public class methodexercises {
      static void main(){
+         Scanner scanner = new Scanner(System.in);
+         System.out.println("Enter your name");
+         String name = scanner.nextLine();
    printwelcome();
-   displayplayername("henok");
+   displayplayername(name);
    showlevel(5);
-   founditem("henok", "sword");
+   founditem(name, "sword");
    castspell("arrow", "fireball",12);
-   gameover("HENOK");
-   displayinventory("Henok ",5);
-   enterdungeon("Henok", "limegrave");
-   victory("Henok");
+   gameover(name);
+   displayinventory(name,5);
+   enterdungeon(name, "limegrave");
+   victory(name);
     }
 
  public static void printwelcome(){
