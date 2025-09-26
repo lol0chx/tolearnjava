@@ -33,6 +33,11 @@ public class methodexercises2 {
         else {
             System.out.println("You CANT OPEN the chest");
         }
+        System.out.println("whats your class");
+        int Class = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println(getplayerclass(Class));
+
     }
     public static String getplayertitle(String name){
         return "lord "+ name;
