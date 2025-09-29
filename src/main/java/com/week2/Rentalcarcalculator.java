@@ -45,5 +45,6 @@ public class Rentalcarcalculator {
 
       totalcost = basiccarrental+totalgpsprice+totaltagprice+roadsideprice;
         System.out.println("Total price = "+ totalcost);
+
     }
 }
