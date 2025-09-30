@@ -15,5 +15,6 @@ public class fullnamegen {
         String lastname = scanner.nextLine();
         lastname=lastname.trim();
         System.out.println(firstname +" "+  middlename +" "+ lastname);
+
     }
 }
