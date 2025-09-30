@@ -10,6 +10,7 @@ public class Rentalcarcalculator {
         double totaltagprice=0;
         double totalgpsprice = 0;
         double roadsideprice =0;
+        double priceperday=0;
         System.out.println("********RENTAL CAR***********");
         System.out.println("a. whats your pick up date\n");
         String pickupdate = scanner.nextLine();
@@ -38,13 +39,18 @@ public class Rentalcarcalculator {
         scanner.nextLine();
         if(age<25){
             basiccarrental =(29.99+ (0.3*29.99) ) * numberofdays;
+            priceperday = 29.99 * 1.3;
         }
         else {
             basiccarrental =29.99 * numberofdays;
+            priceperday =29.99;
         }
 
       totalcost = basiccarrental+totalgpsprice+totaltagprice+roadsideprice;
+        System.out.println("price per day is : "+ priceperday);
         System.out.println("Total price = "+ totalcost);
 
     }
+
+
 }

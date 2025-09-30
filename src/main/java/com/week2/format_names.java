@@ -10,6 +10,7 @@ public class format_names {
         System.out.println("whats your last name");
         String lastname = scanner.nextLine();
         System.out.println(formatname(firstname,lastname));
+
     }
     public static String formatname(String first, String last){
         return last + "," +first;
