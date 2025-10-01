@@ -7,7 +7,7 @@ public class address_builder {
         Scanner scanner = new Scanner(System.in);
         StringBuilder address = new StringBuilder();
         System.out.println("Please provide the following information");
-        System.out.println("\nFull Name:");
+        System.out.println("Full Name: ");
         address.append(scanner.nextLine()).append("\n\n");
         System.out.println("Billing street:");
         address.append(scanner.nextLine()).append("\n");
