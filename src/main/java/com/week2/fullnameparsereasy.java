@@ -13,17 +13,14 @@ public class fullnameparsereasy {
         String firstname ="";
         String middlname ="(none)";
         String lastname ="";
-
         if(parts.length ==2 )
         {
             firstname=parts[0];
             lastname = parts[1];
-
         } else if (parts.length==3) {
             firstname = parts[0];
             middlname = parts[1];
             lastname = parts[2];
-
         }
         else {
             System.out.println("Invalid name format");
@@ -32,5 +29,6 @@ public class fullnameparsereasy {
         System.out.println("first name: "+ firstname);
         System.out.println("middle name: " + middlname);
         System.out.println("last name: "+ lastname);
+
     }
 }
