@@ -1,6 +1,4 @@
-package com.oop;
-
-import java.security.PrivateKey;
+package com.week2.oop;
 
 public class cellphone {
     private String serialnumber;
@@ -9,6 +7,21 @@ public class cellphone {
     private String phonenumber;
     private String owner;
 
+    public cellphone( ) {
+        this.owner = owner;
+        this.phonenumber = phonenumber;
+        this.carrier = carrier;
+        this.model = model;
+        this.serialnumber = serialnumber;
+    }
+
+    public cellphone(String owner, String phonenumber, String carrier, String model, String serialnumber) {
+        this.owner = owner;
+        this.phonenumber = phonenumber;
+        this.carrier = carrier;
+        this.model = model;
+        this.serialnumber = serialnumber;
+    }
 
     public String getOwner() {
         return owner;
@@ -49,4 +62,8 @@ public class cellphone {
     public void setSerialnumber(String serialnumber) {
         this.serialnumber = serialnumber;
     }
+    public void dial(String phonenumber, String caller ){
+        System.out.println(owner + " phone is calling "+phonenumber +caller);
+    }
+
 }
