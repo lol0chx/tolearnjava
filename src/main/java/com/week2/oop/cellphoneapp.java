@@ -7,6 +7,7 @@ public class cellphoneapp {
         cellphone c1 = new cellphone();
         cellphone c2 = new cellphone();
         cellphone c3 = new cellphone();
+
          c2.setSerialnumber("234242 ");
          c2.setOwner("lenok ");
          c2.setCarrier("verizon ");
