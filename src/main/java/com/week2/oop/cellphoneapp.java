@@ -44,6 +44,8 @@ public class cellphoneapp {
         //System.out.println("+++++++++++++++"+c2.getPhonenumber());
       c1.dial(c2.getOwner(),c2.getPhonenumber());
       c2.dial(c3.getOwner(),c3.getPhonenumber());
+
+
        // System.out.println(cp.getSerialnumber()+"\n"+cp.getModel()+"\n"+cp.getCarrier()+"\n"+cp.getPhonenumber()+"\n"+cp.getOwner());
 
 

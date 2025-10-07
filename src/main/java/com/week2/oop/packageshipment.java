@@ -9,6 +9,7 @@ public class packageshipment {
     LocalDate shipdate;
     String status;
 
+
     public packageshipment(LocalDate shipdate, String carrier, String trackingnumber, String receivername, String sendername) {
         this.shipdate = shipdate;
         this.carrier = carrier;
@@ -23,6 +24,7 @@ public class packageshipment {
     }
     public void setstatus(String status){
         this.status= (status.length()==0?"created":status);
+
     }
     public String getStatus(){
         return status;

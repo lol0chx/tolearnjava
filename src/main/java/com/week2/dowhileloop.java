@@ -9,6 +9,11 @@ public class dowhileloop {
         }
 
         while (i<5);
+        String[] schools = {"Calliet", "Cary", "Skyline",
+                "SFASU", "TAMU"};
+        for (String s : schools) {
+            System.out.println(s);
+        }
 
     }
 }

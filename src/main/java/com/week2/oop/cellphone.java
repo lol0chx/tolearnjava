@@ -62,8 +62,11 @@ public class cellphone {
     public void setSerialnumber(String serialnumber) {
         this.serialnumber = serialnumber;
     }
+
     public void dial(String phonenumber, String caller ){
         System.out.println(owner + " phone is calling "+phonenumber +caller);
     }
-
+    public void dialed(cellphone phonenumber){
+        System.out.printf("%s's phone is calling %s\n", owner, phonenumber.getPhonenumber());
+    }
 }
