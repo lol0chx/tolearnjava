@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Scanner;
 
 
-public class emp_main2 {
+public class main_calculator2 {
     static Scanner scanner = new Scanner(System.in);
     static void main() {
         boolean done= false;

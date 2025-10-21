@@ -17,6 +17,7 @@ public class listexercise {
         friendslist.add("sherman");
         friendslist.add("richie");
         friendslist.add("Vice");
+
         friendslist.remove(1);
         for (int i =0; i< friendslist.size();i++){
             //friendslist.set(i, friendslist.get(i)+ " l");
