@@ -1,5 +1,6 @@
 package com.week5.hoteloperations;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -92,21 +93,21 @@ public class Employee {
     LocalDate date = LocalDate.now();
     double timeC;
     double clockInTime;
+    LocalTime startTimee ;
     public void punchIn(){
-        startTime= time.getHour()+ (time.getMinute()/60);
-        clockInTime= startTime;
-        System.out.println(timeC);
-        System.out.println(time);
+        //startTime= time.getHour()+ (time.getMinute()/60);
+       // clockInTime= startTime;
+
+        startTimee = LocalTime.now();
+        System.out.println("start time: "+startTimee);
     }
     public void punchOut(){
-        double currentTime =time.getHour()+ (time.getMinute()/60);
+        LocalTime endTime = LocalTime.now();
+        double hours = Duration.between(startTimee, endTime).toMinutes() / 60.0;
 
-        hoursWorked= hoursWorked+ (  timeC- startTime);
-        System.out.println("time right now :"+ timeC);
-        System.out.println("hours worked " +hoursWorked);
-        System.out.println("start time "+ startTime);
     }
     public void punchOut(double time) {
+
         hoursWorked += (time - startTime);
     }
 
