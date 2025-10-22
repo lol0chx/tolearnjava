@@ -9,7 +9,7 @@ public class Employee {
     private String name;
     private String department;
     private double payRate;
-    private double hoursWorked=0;
+    private double hoursWorked;
     private double startTime;
 
     public Employee(long employeeId, String name, String department, double payRate, double hoursWorked, double startTime) {
@@ -19,10 +19,6 @@ public class Employee {
         this.payRate = payRate;
         this.hoursWorked = hoursWorked;
         this.startTime = startTime;
-    }
-
-    public Employee() {
-
     }
 
     public long getEmployeeId() {
@@ -86,29 +82,27 @@ public class Employee {
     }
 
     // regular methods
+    public void punchIn() {
+        startTime = getTimeAsDouble();
+    }
+
     public void punchIn(double time) {
         startTime = time;
     }
-    LocalTime time = LocalTime.now();
-    LocalDate date = LocalDate.now();
-    double timeC;
-    double clockInTime;
-    LocalTime startTimee ;
-    public void punchIn(){
-        //startTime= time.getHour()+ (time.getMinute()/60);
-       // clockInTime= startTime;
 
-        startTimee = LocalTime.now();
-        System.out.println("start time: "+startTimee);
+    public void punchOut() {
+        hoursWorked += (getTimeAsDouble() - startTime);
     }
-    public void punchOut(){
-        LocalTime endTime = LocalTime.now();
-        double hours = Duration.between(startTimee, endTime).toMinutes() / 60.0;
 
-    }
     public void punchOut(double time) {
-
         hoursWorked += (time - startTime);
+    }
+
+    public double getTimeAsDouble() {
+        LocalTime lt = LocalTime.now();
+        double hours = lt.getHour();
+        double minutes = lt.getMinute() / 60.0;
+        return hours + minutes;
     }
 
 }
