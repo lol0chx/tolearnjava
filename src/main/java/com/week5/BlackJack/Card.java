@@ -34,10 +34,16 @@ public class Card {
 // A = 11
 // K, Q, J = 10
 // all numeric cards are equal to their face value
+            if(value.equals("A")){
+                return 11;
+            } else if(value.equals("K") || value.equals("Q") || value.equals("J")){
+                return 10;
+            } else {
+                return Integer.parseInt(value);
+            }
         } else {
-            return 5;
+            return 0;
         }
-        return 0;
     }
     public boolean isFaceUp(){
         return isFaceUp;

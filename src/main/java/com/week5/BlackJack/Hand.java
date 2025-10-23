@@ -66,7 +66,12 @@ public class Hand {
             if (i > 0) {
                 sb.append(", ");
             }
-            sb.append(cards.get(i).getValue()).append(" of ").append(cards.get(i).getSuit());
+            Card card = cards.get(i);
+            if (card.isFaceUp()) {
+                sb.append(card.getValue()).append(" of ").append(card.getSuit());
+            } else {
+                sb.append("Hidden Card");
+            }
         }
         return sb.toString();
     }
