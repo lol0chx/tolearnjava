@@ -20,14 +20,16 @@ public class CombatManager {
         return true;
     }
 
-    static void main() {
+   static void main() {
         fighterMap.put("nic",23);
         fighterMap.put("joe",25);
-        fighterMap.put("jen",12);
+        fighterMap.put("jen",11);
+        fighterMap.put("lol",54);
+        fighterMap.put("che",12);
         int a =0;
         String aa=null;
         System.out.println("=== Fighter Speeds ===");
-        String[] sortedList = new String[3];
+        String[] sortedList = new String[10];
         ArrayList<String> fightersList = new ArrayList<>();
 
         for (Map.Entry<String, Integer> entry : fighterMap.entrySet()) {
@@ -37,12 +39,16 @@ public class CombatManager {
 
 
             for (Map.Entry<String, Integer> entry2 : fighterMap.entrySet()) {
+                fightersList.add(entry2.getKey());
+                for(int i =0;i<6;i++) {
 
                 if (entry.getValue() < entry2.getValue()) {
 
-                     a = entry2.getValue();
+
+                    a = entry2.getValue();
                     aa=entry2.getKey();
-                    fightersList.add(entry2.getKey());
+
+                }
 
                 }
             }
