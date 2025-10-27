@@ -9,11 +9,11 @@ public class Main {
 
         // Initial deal: two cards each
         for (int i = 0; i < 2; i++) {
-            Card playerCard = deck.dealCard();
+            Card playerCard = deck.deal();
             playerCard.flip();
             playerHand.addCard(playerCard);
 
-            Card dealerCard = deck.dealCard();
+            Card dealerCard = deck.deal();
             dealerCard.flip();
             dealerHand.addCard(dealerCard);
         }
@@ -23,7 +23,7 @@ public class Main {
 
         // Player strategy: hit until 17 or higher
         while (playerHand.getValue() < 17) {
-            Card hit = deck.dealCard();
+            Card hit = deck.deal();
             hit.flip();
             playerHand.addCard(hit);
             System.out.println("Player hits: " + hit.getValue() + " of " + hit.getSuit());
@@ -38,7 +38,7 @@ public class Main {
 
         // Dealer strategy: hit until 17 or higher
         while (dealerHand.getValue() < 17) {
-            Card hit = deck.dealCard();
+            Card hit = deck.deal();
             hit.flip();
             dealerHand.addCard(hit);
             System.out.println("Dealer hits: " + hit.getValue() + " of " + hit.getSuit());

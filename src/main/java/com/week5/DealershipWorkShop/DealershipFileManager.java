@@ -1,8 +1,6 @@
 package com.week5.DealershipWorkShop;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,12 +34,37 @@ public class DealershipFileManager {
         }
         return inventory;
     }
-
-    public void displayInventory(){
-        System.out.println("List of Inventory ");
-        System.out.println(header);
-        for(Vehicle vehicles: inventory) {
-            System.out.println(vehicles);
+    
+    // Get dealership with all data
+    public Dealership getDealership() {
+        try {
+            BufferedReader bufReader = new BufferedReader(new FileReader("DealershipFiles/inventory.csv"));
+            
+            // Read dealership info (first line)
+            String dealershipInfo = bufReader.readLine();
+            String[] dealershipParts = dealershipInfo.split("\\|");
+            String name = dealershipParts[0];
+            String address = dealershipParts[1];
+            String phone = dealershipParts[2];
+            
+            // Create dealership object
+            Dealership dealership = new Dealership(phone, address, name);
+            
+            // Read header (second line)
+            header = bufReader.readLine();
+            bufReader.close();
+            
+            // Load vehicles using existing method
+            List<Vehicle> vehicles = LoadInventory();
+            dealership.setInventory(vehicles);
+            
+            return dealership;
+            
+        } catch (IOException e) {
+            System.out.println("Error reading dealership file: " + e.getMessage());
+            e.printStackTrace();
+            return null;
         }
     }
+
 }
