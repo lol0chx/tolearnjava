@@ -8,5 +8,7 @@ public class forloop {
             Thread.sleep(1000);
         }
         System.out.println("\nLAUNCH");
+        String a ="df";
+
     }
 }
