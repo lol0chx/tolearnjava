@@ -1,0 +1,152 @@
+@startuml
+' Project UML generated from source files
+
+skinparam classAttributeIconSize 0
+
+package "com.week7.Finance" {
+  interface Valuable {
+    + double getValue()
+  }
+
+  class FinanceApplication {
+    + main(String[] args)
+  }
+
+  package "Bank" {
+    class BankAccount {
+      - String name
+      - String accountNumber
+      - double balance
+      + BankAccount(name, accountNumber, balance)
+      + deposit(amount)
+      + withdraw(amount)
+      + getValue()
+    }
+
+    class CreditCard {
+      - String name
+      - String accountNumber
+      - double balance
+      + CreditCard(name, accountNumber, balance)
+      + charge(amount)
+      + pay(amount)
+      + getValue()
+    }
+  }
+
+  package "FixedAssets" {
+    class FixedAsset {
+      - String name
+      - Double marketValue
+      + FixedAsset(name, marketValue)
+      + getValue()
+    }
+
+    class House {
+      - int yearBuilt
+      - int squareFeet
+      - int bedrooms
+      + House(name, marketValue, yearBuilt, squareFeet, bedrooms)
+      + getValue()
+    }
+
+    class Jewelry {
+      - Double karat
+      + Jewelry(name, marketValue, karat)
+      + getValue()
+    }
+
+    class Gold {
+      - double weight
+      + Gold(name, marketValue, weight)
+      + getValue()
+    }
+  }
+}
+
+package "com.week7.StreamsPart1" {
+  class Person {
+    - String firstName
+    - String lastName
+    - int age
+    + Person(firstName, lastName, age)
+    + getFirstName()
+    + getLastName()
+    + getAge()
+  }
+}
+
+package "com.week7.StreamsPart2" {
+  class Person2 << (P,#ADD8E6) Person >> {
+    - String firstName
+    - String lastName
+    - int age
+    + Person(firstName, lastName, age)
+  }
+}
+
+package "com.week7.lambdaExercises.appliedLambda" {
+  interface IntFilter {
+    + boolean filter(int number)
+  }
+  interface StringFilter {
+    + boolean filter(String text)
+  }
+  class App {
+    + filterNumber(filter, numbers)
+  }
+}
+
+package "com.week7.lambdaExercises" {
+  interface Hello {
+    + sayHello(name)
+  }
+  class FirstLambda {
+    + main()
+  }
+}
+
+package "com.week7.Generics" {
+  class FixedList<T> {
+    - int maxSize
+    - List<T> items
+    + FixedList(maxSize)
+  }
+}
+
+package "com.week7.exercise" {
+  abstract class ab {
+    + void log(message)
+    + abstract void start()
+  }
+  abstract class test {
+    - String o
+    - String d
+    - int num
+  }
+}
+
+' Relationships
+BankAccount ..|> Valuable
+CreditCard ..|> Valuable
+FixedAsset ..|> Valuable
+House --|> FixedAsset
+Jewelry --|> FixedAsset
+Gold --|> FixedAsset
+
+FinanceApplication --> BankAccount : creates/uses
+FinanceApplication --> CreditCard : uses
+FinanceApplication --> FixedAsset : aggregates
+
+App ..> IntFilter
+App ..> StringFilter
+FirstLambda ..> Hello
+
+FixedList ..> Person : can hold
+
+test --> ab : has
+
+' Note about similarly named Person classes
+Person2 .. Person : <<similar structure>>
+
+@enduml
