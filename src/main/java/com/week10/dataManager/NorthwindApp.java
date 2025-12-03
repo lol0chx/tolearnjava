@@ -42,6 +42,7 @@ public class NorthwindApp {
         basicDataSource.setPassword(args[1]);
 
         dataManager = new NorthwindDataManager(basicDataSource);
+
     }
 
     public static void displayProduct(List<Product> products) {
